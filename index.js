@@ -6,13 +6,14 @@ function encrypt(){
   const rot = document.getElementById("rot")
 
   var arrInput = input.split('')
-  var cifraCesar = rot.value
+  var cifraCesar = parseInt(rot.value)
 
   newText = []
   arrInput.forEach(element => {
     textUpper = element.toUpperCase()
-    letterIndexAlfabeto = alfabeto.indexOf(textUpper)
-    output.value  = output.value + alfabeto[letterIndexAlfabeto + cifraCesar]
+    var letterIndexAlfabeto = parseInt(alfabeto.indexOf(textUpper))
+    console.log(letterIndexAlfabeto + cifraCesar)
+    output.value  = (textUpper == ' ') ? ' ' : (output.value + alfabeto[letterIndexAlfabeto + cifraCesar])
     
     
   });
