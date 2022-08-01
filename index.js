@@ -17,7 +17,5 @@ function encrypt(){
     output.value  = (textUpper == ' ') ? output.value + ' ' : (output.value + (alfabeto[letterIndexAlfabeto + cifraCesar]))
     
   });
-  
-
 
 }
