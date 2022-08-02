@@ -12,8 +12,9 @@ function encrypt(){
   arrInput.forEach(element => {
     textUpper = element.toUpperCase()
     var letterIndexAlfabeto = parseInt(alfabeto.indexOf(textUpper))
-    console.log(letterIndexAlfabeto + cifraCesar)
-    // output.value = ''
+    if ((letterIndexAlfabeto + cifraCesar) >= alfabeto.length){
+      var letterIndexAlfabeto = -1
+    }
     output.value  = (textUpper == ' ') ? output.value + ' ' : (output.value + (alfabeto[letterIndexAlfabeto + cifraCesar]))
     
   });
